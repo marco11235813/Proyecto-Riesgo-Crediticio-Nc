@@ -22,7 +22,7 @@
 
 # Producto
 
-- [Presentación del Producto](video/Presentación.mp4)
+- [Presentación del Producto](https://www.youtube.com/watch?v=nyYlZbD9mS4)
 - [Documentación Completa del Desarrollo del Proyecto](docs/Documentacion_AyC_Riesgo_Crediticio.docx)
 
 # Índice
