@@ -536,8 +536,17 @@ def descripcion_distribucion(df: pd.DataFrame):
 def conversion_de_tablas_dinamicas(path: str, n_hoja: int, start_row: int, start_col: str, etiqueta_año: int):
 
     """
+    Extrae una tabla dinámica de una hoja específica de un archivo Excel y la guarda en formato Parquet.
     
-    
+    Args:
+        path (str): Ruta al archivo Excel.
+        n_hoja (int): Número de la hoja a procesar (1-indexed).
+        start_row (int): Fila inicial de la tabla dinámica.
+        start_col (str): Columna inicial de la tabla dinámica (letra).
+        etiqueta_año (int): Etiqueta del año para el nombre del archivo Parquet de salida.
+
+    Returns:
+        pd.DataFrame: DataFrame de pandas con la tabla dinámica extraída.
     """
 
 
@@ -579,8 +588,19 @@ def conversion_de_tablas_dinamicas(path: str, n_hoja: int, start_row: int, start
 def extraccion_de_tablas(path: str, n_hoja: int, start_row: int, start_col: str, end_row: int, end_col: str, etiqueta_tema: str):
 
     """
+    Extrae una tabla de una hoja específica de un archivo Excel y la guarda en formato Parquet.
     
-    
+    Args:
+        path (str): Ruta al archivo Excel.
+        n_hoja (int): Número de la hoja a procesar (1-indexed).
+        start_row (int): Fila inicial de la tabla dinámica.
+        start_col (str): Columna inicial de la tabla dinámica (letra).
+        end_row (int): Fila final de la tabla dinámica.
+        end_col (str): Columna final de la tabla dinámica (letra).
+        etiqueta_tema (str): Etiqueta para el nombre del archivo Parquet de salida.
+
+    Returns:
+        pd.DataFrame: DataFrame de pandas con la tabla dinámica extraída.
     """
 
     # Cargar el archivo Excel
@@ -633,8 +653,13 @@ def extraccion_de_tablas(path: str, n_hoja: int, start_row: int, start_col: str,
 def make_unique(column_names):
 
     """
-    
-    
+        Asegura que cada nombre en la lista de nombres de columnas sea único.
+        
+        Args:
+            column_names (list of str): Lista de nombres de columnas.
+        
+        Returns:
+            generator: Generador que produce nombres de columnas únicos.
     """
 
     seen = set()

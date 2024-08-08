@@ -20,6 +20,11 @@
 ![Google Colaboratory](https://img.shields.io/badge/-Google%20Colaboratory-black?style=flat-square&logo=googlecolaboratory)
 ![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-black?style=flat&logo=visual-studio-code&logoColor=007ACC)
 
+# Producto
+
+- [Presentación del Producto](video/Presentación.mp4)
+- [Documentación Completa del Desarrollo del Proyecto](docs/Documentacion_AyC_Riesgo_Crediticio.docx)
+
 # Índice
 
 - [Introducción](#Introducción)
@@ -64,7 +69,7 @@ Los principales objetivos y condiciones en este sentido son:
 
 # Datos
 
-En Principio, los datos con los que contamos y vamos a trabajar referidos a la tematica de proyecto, son de diferentes origenes, aunque principalmente se obtienen de la plataforma web de datos publicos de la nacion (tanto en Datos Argentina como en los diferenetes ministerios o la plataforma de la nación).
+En Principio, los datos con los que contamos y vamos a trabajar referidos a la tematica de proyecto, son de diferentes origenes, aunque principalmente se obtienen de la plataforma web de datos publicos de la nacion (tanto en Datos Argentina como en los diferentes ministerios o la plataforma de la nación).
 
 Detallamos los origenes principales:
 * https://kaggle.com/
@@ -96,6 +101,8 @@ Los datos con los que se trabaja son:
 
 Mención aparte a los informes o analisis y benchmark de la temática que utilizamos y que no se registran como datos, ya que nos sirven para tener conocimiento y guia del tema en analisis
 y poner en contexto y terminologia, asi como mecanismos y utilizacion de herramientas y logica al material de datos con el que contamos.
+
+Por último, disponibilizamos el diccionario de datos del material trabajado y su nomenclatura y definición [aquí](docs/Diccionario%20de%20Datos.pdf).
 
 
 # Desarrollo
@@ -142,15 +149,21 @@ Para completar el camino realizado en la Extracción, Transformacion y Carga/dis
 
 </details>
 <details>
-  <summary>Informe EDA Preiminar</summary>
+  <summary>Informe EDA Preliminar</summary>
   
-  -El [Informe EDA_preliminar](notebooks/EDA_preliminar.ipynb) hace incapie en una instancia intermedia entre la carga y disponibilizacion de los datos y su uso puntual en un informe EDA. En el utilizamos funciones que permiten ver graficamente la distribucion de valores de cada campo en cada fichero y su proporcion en el conjunto total, complementando los mismos con estadísticas básicas de los mismos los que nos permiten tener un panorama general al momento de realizar un análisis mas exhaustivo y complejo, es decir, nos permite aproximarnos a los datos de una manera general en un sentido mucho mas estadistico/analítico previo a su estudio.
+  -El [Informe EDA_preliminar](notebooks/EDA_preliminar.ipynb) se enfoca en una instancia intermedia entre la carga y disponibilizacion de los datos y su uso puntual en un informe EDA. En el utilizamos funciones que permiten ver graficamente la distribucion de valores de cada campo en cada fichero y su proporcion en el conjunto total, complementando los mismos con estadísticas básicas de los mismos los que nos permiten tener un panorama general al momento de realizar un análisis mas exhaustivo y complejo, es decir, nos permite aproximarnos a los datos de una manera general en un sentido mucho mas estadistico/analítico previo a su estudio.
   
   |                       |
   |-----------------------|
   | ![Imagen 4 ](assets/distribucion_densidad.png) |
   | Distribucion de frecuencias en un campo con valores proporcionales. Podemos ver en los gráficos la distribucion y densidad de valores en conjunto con la presencia de outliers y asimetria en la distribución |
+
 </details>
+
+<br>
+
+Este proceso se realizó utilizando una serie de funciones construidas para su ejecución (desarrolladas en lenguaje Python) se pueden consultar en el siguiente script llamado [resources](notebooks/resources.py)
+
 <details>
   <summary>Otra información: Modelo ER</summary>
 
@@ -173,8 +186,8 @@ Con nuestra data ya estructurada y en condiciones optimas, procedemos a la etapa
 
 En un principio dividimos esta etapa en dos grandes áreas:
 
-- Análisis del contexto general-global.
-- Análisis del mercado doméstico o local.
+- Análisis del contexto general-global. [Ver más](notebooks/Analisis_EDA_1.ipynb)
+- Análisis del mercado doméstico o local. [Ver más](notebooks/Analisis_EDA_2.ipynb)
 
 <details>
   <summary>Ver más</summary>
@@ -192,6 +205,8 @@ Para acceder al análisis del contexto global, pueden ver la perspectiva técnic
 Para acceder al análisis del contexto local, pueden ver la perspectiva técnica en el siguiente [link](notebooks/Analisis_EDA_2.ipynb)
 
 </details>
+
+<br>
 
 Disponibilizamos el informe del análisis realizado [aquí](docs/Informe%20Completo%20Evaluación%20del%20Riesgo%20Crediticio%20de%20YPF.pdf)
 
@@ -231,8 +246,9 @@ Ponemos a disposicion el desarrollo de nuestro modelo [aquí](notebooks/modelo.i
 
 ## Deploy
 
-Realizamos el despliegue de nuestro modelo en primer término en el servicio de Render.
+El desarrollo de la app para el despliegue de nuestro modelo predictivo se puede consultar [aquí](deploy_modelo.py)
 
+Realizamos el despliegue de nuestro modelo en primer término en el servicio de Render.
 Se puede ver el servicio corriendo con el modelo en producción en el siguiente [link](https://c19-108-m-data-bi.onrender.com).
 
 <details>
@@ -244,8 +260,6 @@ Se puede ver el servicio corriendo con el modelo en producción en el siguiente 
 > Interfaz del modelo en producción creada con streamlit y corriendo en el servicio de Render
 
 </details>
-
-También, ponemos a disposición una página web destinada a ver el informe general del proyecto, brindando datos de nuestra empresa, el servicio que se brinda, análisis y datos del desarrollo de nuestro proyecto con enlaces a los productos finales del mismo.
 
 # Tecnologías
 
