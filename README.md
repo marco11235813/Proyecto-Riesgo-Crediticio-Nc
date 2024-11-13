@@ -108,7 +108,7 @@ Por último, disponibilizamos el diccionario de datos del material trabajado y s
 # Desarrollo
 
 <details>
-<summary><strong><u>Resumen Workflow</u></strong></summary>
+<summary>Resumen Workflow</summary>
 
 <p align = center>
   <img src= 'assets/workflow.png' width= 100% >
